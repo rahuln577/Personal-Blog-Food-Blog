@@ -7,7 +7,7 @@ const path=require("path")
 const { stringify } = require("querystring")
 const { Int32 } = require("mongodb")
 const internal = require("stream")
-const port="800"
+const port=process.env.PORT || 5000
 const url="mongodb+srv://rahuln577:mantralaya123@cluster0.esckorx.mongodb.net/?retryWrites=true&w=majority"
 app.use(bodyparser.urlencoded({extended:true}))
 mongoose.connect(url,{useNewUrlParser:true})
