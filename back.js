@@ -213,7 +213,7 @@ app.put("/like9",(req,res)=>{
     res.redirect("/card9")
 })
 app.get("/",(req,res)=>{
-    res.status(200).render("index")
+    res.sendFile(path.join(__dirname+'/index.html'));
 })
 app.get("/card1",(req,res)=>{
     let v
